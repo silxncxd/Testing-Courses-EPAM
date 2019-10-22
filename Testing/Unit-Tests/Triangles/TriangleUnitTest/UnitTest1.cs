@@ -14,15 +14,15 @@ namespace TriangleUnitTest
         }
 
         [TestMethod]
-        public void IsTriangleRightTest()
+        public void IsTriangleIsosceles()
         {
-            Assert.IsTrue(Triangle.IsTriangle(5, 8, 10));
+            Assert.IsTrue(Triangle.IsIsoscelesTriangle(12, 10, 10));
         }
 
         [TestMethod]
         public void IsTriangleIsoscelesTest()
         {
-            Assert.IsTrue(Triangle.IsTriangle(2, 2, 3));
+            Assert.IsTrue(Triangle.IsIsoscelesTriangle(2, 2, 3));
         }
 
         [TestMethod]
@@ -38,9 +38,9 @@ namespace TriangleUnitTest
         }
 
         [TestMethod]
-        public void IsTriangleGoodTest()
+        public void IsRightTriangleTest()
         {
-            Assert.IsTrue(Triangle.IsTriangle(4, 5, 6));
+            Assert.IsFalse(Triangle.IsRightTriangle(4, 5, 6));
         }
 
         [TestMethod]
