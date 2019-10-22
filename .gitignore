@@ -80,4 +80,8 @@ artifacts/
 #!**/[Pp]ackages/repositories.config
 # NuGet v3's project.json files produces more ignorable files
 *.nuget.props
+<<<<<<< HEAD
 *.nuget.targets
+=======
+*.nuget.targets
+>>>>>>> ee668c9d25fc696b7be422009a8eca1c2f751511
