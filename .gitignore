@@ -7,6 +7,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.config
 
 # Build results
 [Dd]ebug/
@@ -22,6 +23,7 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+[Tt]estResult/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -84,3 +86,4 @@ artifacts/
 *.nuget.targets
 =======
 *.nuget.targets
+>>>>>>> ee668c9d25fc696b7be422009a8eca1c2f751511
