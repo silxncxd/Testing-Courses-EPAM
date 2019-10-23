@@ -14,13 +14,13 @@ namespace TriangleUnitTest
         }
 
         [TestMethod]
-        public void IsTriangleIsosceles()
+        public void IsIsoscelesTest()
         {
             Assert.IsTrue(Triangle.IsIsoscelesTriangle(12, 10, 10));
         }
 
         [TestMethod]
-        public void IsTriangleIsoscelesTest()
+        public void IsTriangleIsoscelesTest1()
         {
             Assert.IsTrue(Triangle.IsIsoscelesTriangle(2, 2, 3));
         }

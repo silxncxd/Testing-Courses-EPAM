@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2725DD46-2133-4D82-BD24-8D9E778CD689}</ProjectGuid>
+    <ProjectGuid>{2CFBBD15-38FC-4800-BA5E-469E3BADD1C9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TriangleUnitTest</RootNamespace>
-    <AssemblyName>TriangleUnitTest</AssemblyName>
+    <RootNamespace>Triangle</RootNamespace>
+    <AssemblyName>Triangle</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -49,16 +49,16 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="TriangleTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Triangles\Triangles.csproj">
-      <Project>{65d74e72-1102-44cf-9da2-03095548cc15}</Project>
-      <Name>Triangles</Name>
+    <ProjectReference Include="..\TriangleMethod\TriangleMethod.csproj">
+      <Project>{951736ca-7310-44a4-9f73-33bcf02ddfa7}</Project>
+      <Name>TriangleMethod</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
