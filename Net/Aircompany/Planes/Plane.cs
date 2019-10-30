@@ -4,10 +4,10 @@ namespace Aircompany.Planes
 {
     public abstract class Plane
     {
-        public string planeModel;
-        public int planeMaxSpeed;
-        public int planeMaxFlightDistance;
-        public int planeMaxLoadCapacity;
+        private string planeModel;
+        private int planeMaxSpeed;
+        private int planeMaxFlightDistance;
+        private int planeMaxLoadCapacity;
 
         public Plane(string planeModel, int planeMaxSpeed, int planeMaxFlightDistance, int planeMaxLoadCapacity)
         {

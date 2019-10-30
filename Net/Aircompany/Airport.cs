@@ -1,6 +1,5 @@
 ﻿using Aircompany.Models;
 using Aircompany.Planes;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -8,11 +7,11 @@ namespace Aircompany
 {
     public class Airport
     {
-        public List<Plane> planes;
+        private List<Plane> planes;
 
         public Airport(IEnumerable<Plane> planes)
         {
-            planes = planes.ToList();
+            this.planes = planes.ToList();
         }
 
         public IEnumerable<PassengerPlane> GetPassengerPlanes()
@@ -51,7 +50,6 @@ namespace Aircompany
             return new Airport(planes.OrderBy(w => w.GetPlaneMaxLoadCapacity()));
         }
 
-
         public IEnumerable<Plane> GetPlanes()
         {
             return planes;
@@ -59,8 +57,7 @@ namespace Aircompany
 
         public override string ToString()
         {
-            return "Airport{" +
-                    "planes=" + string.Join(", ", planes.Select(x => x.GetPlaneModel())) + '}';
+            return "Airport{" + "planes=" + string.Join(", ", planes.Select(x => x.GetPlaneModel())) + '}';
         }
     }
 }
