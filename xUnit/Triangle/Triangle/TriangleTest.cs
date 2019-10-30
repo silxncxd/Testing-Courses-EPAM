@@ -26,25 +26,25 @@ namespace TriangleUnitTest
         }
 
         [TestMethod]
-        public void IsTriangleTwoBadSidesGoodTest()
+        public void IsTriangleTwoBadSidesTest()
         {
             Assert.IsFalse(Triangle.IsTriangle(-4, -5, 6));
         }
 
         [TestMethod]
-        public void IsIsoscelesTwoEqualSidesTest()
+        public void IsIsoscelesTriangleTwoEqualSidesTest()
         {
             Assert.IsTrue(Triangle.IsIsoscelesTriangle(12, 10, 10));
         }
 
         [TestMethod]
-        public void IsIsoscelesTriangleTestBad()
+        public void IsIsoscelesTriangleBadTest()
         {
             Assert.IsFalse(Triangle.IsIsoscelesTriangle(2, 5, 3));
         }
 
         [TestMethod]
-        public void IsTriangleIsoscelesOneBadSideTest()
+        public void IsIsoscelesTriangleOneBadSideTest()
         {
             Assert.IsFalse(Triangle.IsIsoscelesTriangle(4, -5, 6));
         }
@@ -52,11 +52,11 @@ namespace TriangleUnitTest
         [TestMethod]
         public void IsRightTriangleGoodTest()
         {
-            Assert.IsTrue(Triangle.IsRightTriangle(6,8,10));
+            Assert.IsTrue(Triangle.IsRightTriangle(6, 8, 10));
         }
 
         [TestMethod]
-        public void IsRightTriangleThreeBadSidesGoodTest()
+        public void IsRightTriangleThreeBadSidesTest()
         {
             Assert.IsFalse(Triangle.IsRightTriangle(-4, -5, -6));
         }
