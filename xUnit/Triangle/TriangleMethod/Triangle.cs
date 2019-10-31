@@ -7,7 +7,7 @@ namespace Triangles
         public static bool IsTriangle(double sideA, double sideB, double sideC)
         {
             if (sideA <= 0 || sideB <= 0 || sideC <= 0)
-                throw new Exception("Sides can't be above zero");
+                throw new Exception("Sides can't be below zero");
             if (sideA + sideB <= sideC || sideB + sideC <= sideA || sideA + sideC <= sideB)
                 return false;
             return true;
