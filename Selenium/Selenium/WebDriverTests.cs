@@ -31,13 +31,17 @@ namespace Selenium
         //test 1
         public void SearchTrips()
         {
+            string departure = "RĪGA PASAŽIERU";
+            string arrival = "MINSKA PASAŽIERU";
+
             wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(5));
+
             webDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             var departureStation = webDriver.FindElement(By.XPath("//input[@name = 'from']"));
-            departureStation.SendKeys("RĪGA PASAŽIERU");
+            departureStation.SendKeys(departure);
 
             var arrivalStation = webDriver.FindElement(By.XPath("//input[@name = 'to']"));
-            arrivalStation.SendKeys("MINSKA PASAŽIERU");
+            arrivalStation.SendKeys(arrival);
 
             string todayDate = DateTime.Now.ToShortDateString();
             var dateInput = webDriver.FindElement(By.XPath("//input[@name = 'departure']"));
@@ -45,12 +49,18 @@ namespace Selenium
 
             var cancelReturnTripButton = webDriver.FindElement(By.XPath("//span[@class='dotted-link js-book-tickets-oneway-trigger']"));
             cancelReturnTripButton.Click();
+
             wait.Until(condition: ExpectedConditions.ElementToBeClickable(By.CssSelector(".button.with-outlines")));
             var sendRequestButton = webDriver.FindElement(By.CssSelector(".button.with-outlines"));
             sendRequestButton.Click();
 
-            Assert.AreEqual("https://travel.ldz.lv/lv/booking/booking-1", webDriver.Url);
-            QuitDriver();
+            var correctDepartureStation = webDriver.FindElement(By.XPath("//span[@class = 'from']"));
+            var correctArrivalStation = webDriver.FindElement(By.XPath("//span[@class = 'to']"));
+
+            string correctTrip = departure + arrival;
+            string returnedTrip = (correctDepartureStation.Text + correctArrivalStation.Text).ToUpper();
+
+            Assert.AreEqual(correctTrip, returnedTrip);
         }
 
         [Test]
@@ -78,7 +88,6 @@ namespace Selenium
 
             var errorText = webDriver.FindElement(By.CssSelector(".modal-title")).Text;
             Assert.AreEqual("KĻŪDA!", errorText);
-            QuitDriver();
         }
     }
 }
