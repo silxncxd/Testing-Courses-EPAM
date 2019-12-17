@@ -52,7 +52,7 @@ namespace LdzTravelAutomation.Tests
         [Test]
         public void FalsePassengerInfo()
         {
-            TripInfo trip = TripInfoCreator.SetPastDateInfo();
+            TripInfo trip = TripInfoCreator.SetAllProperties();
             TravelerInfoPage travelerInfoPage = new MainPage(Driver)
                 .InputTripInfo(trip)
                 .CancelReturnTrip()
@@ -76,7 +76,7 @@ namespace LdzTravelAutomation.Tests
         [Test]
         public void CheckSumOfTickets()
         {
-            TripInfo trip = TripInfoCreator.SetPastDateInfo();
+            TripInfo trip = TripInfoCreator.SetAllProperties();
             TravelerInfoPage travelerInfoPage = new MainPage(Driver)
                 .InputTripInfo(trip)
                 .CancelReturnTrip()
@@ -116,7 +116,7 @@ namespace LdzTravelAutomation.Tests
         [Test]
         public void SuccessBookingTest()
         {
-            TripInfo trip = TripInfoCreator.SetPastDateInfo();
+            TripInfo trip = TripInfoCreator.SetAllProperties();
             BookingPage bookingPage = new MainPage(Driver)
                 .InputTripInfo(trip)
                 .CancelReturnTrip()
