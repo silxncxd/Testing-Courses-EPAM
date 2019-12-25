@@ -46,7 +46,7 @@ namespace LdzTravelAutomation.Pages
             Email.SendKeys(question.Email);
             Message.SendKeys(question.YourQuestion);
             AgreeButton.Click();
-            Logger.Log.Info($"Question input: {question.Name} / {question.Theme} / {question.Email} / {question.YourQuestion}/");
+            Logger.Log.Info("Question input: " + question.Name + "/" + question.Theme + "/" + question.Email + "/" + question.YourQuestion);
             return this;
         }
 
