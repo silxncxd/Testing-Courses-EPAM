@@ -1,4 +1,5 @@
 ﻿using LdzTravelAutomation.Models;
+using LdzTravelAutomation.Services;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
@@ -35,6 +36,7 @@ namespace LdzTravelAutomation.Pages
         {
             driver = webDriver;
             PageFactory.InitElements(webDriver, this);
+            Logger.Log.Info("Question page initialized");
         }
 
         public QuestionPage InputQuestion(QuestionInfo question)
@@ -44,13 +46,14 @@ namespace LdzTravelAutomation.Pages
             Email.SendKeys(question.Email);
             Message.SendKeys(question.YourQuestion);
             AgreeButton.Click();
+            Logger.Log.Info($"Question input: {question.Name} / {question.Theme} / {question.Email} / {question.YourQuestion}/");
             return this;
         }
 
         public QuestionPage ClickSendQuestionButton()
         {
-            new WebDriverWait(driver, TimeSpan.FromSeconds(5)).Until(ExpectedConditions.ElementIsVisible(By.ClassName("recaptcha-checkbox-checkmark")));
             SendButton.Click();
+            Logger.Log.Info("Send question button clicked");
             return this;
         }
     }

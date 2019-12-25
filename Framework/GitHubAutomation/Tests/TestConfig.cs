@@ -1,5 +1,6 @@
 ﻿using LdzTravelAutomation.Driver;
 using NUnit.Framework;
+using LdzTravelAutomation.Services;
 using NUnit.Framework.Interfaces;
 using OpenQA.Selenium;
 using LdzTravelAutomation.Utils;
@@ -14,7 +15,7 @@ namespace LdzTravelAutomation.Tests
         public void StartDriver()
         {
             Driver = DriverSingleton.GetDriver();
-            Driver.Navigate().GoToUrl("https://travel.ldz.lv/");
+            Logger.Log.Info("Browser initialized");
         }
 
         [TearDown]
@@ -23,6 +24,7 @@ namespace LdzTravelAutomation.Tests
             if (TestContext.CurrentContext.Result.Outcome != ResultState.Success)
             {
                 ScreenshotCreator.SaveScreenShot(Driver);
+                Logger.Log.Info("Error acquired, screenshot done");
             }
             DriverSingleton.CloseDriver();
         }

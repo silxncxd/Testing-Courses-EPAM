@@ -1,4 +1,5 @@
 ﻿using LdzTravelAutomation.Models;
+using LdzTravelAutomation.Services;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
@@ -41,6 +42,8 @@ namespace LdzTravelAutomation.Pages
         {
             this.driver = webDriver;
             PageFactory.InitElements(webDriver, this);
+            Logger.Log.Info("Main page initialized");
+
         }
 
         public MainPage InputTripInfo(TripInfo trip)
@@ -50,17 +53,21 @@ namespace LdzTravelAutomation.Pages
             departureStation.SendKeys(trip.DepartureStation);
             arrivalStation.SendKeys(trip.ArrivalStation);
             departureDate.SendKeys(trip.DepartureDate + "\n");
+            Logger.Log.Info($"Input trip info: {trip.DepartureStation} / {trip.ArrivalStation} / {trip.DepartureDate}");
             return this;
         }
 
         public MainPage CancelReturnTrip()
         {
             cancelReturnTripButton.Click();
+            Logger.Log.Info("Cancel return trip button clicked");
+
             return this;
         }
         public MainPage InputReturnDate(TripInfo trip)
         {
             returnDate.SendKeys(trip.ReturnDate + "\n");
+            Logger.Log.Info($"Return date input {trip.ReturnDate}");
             return this;
         }
 
@@ -68,12 +75,14 @@ namespace LdzTravelAutomation.Pages
         {
             new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementToBeClickable(By.CssSelector(".button.with-outlines")));
             sendRequestButton.Click();
+            Logger.Log.Info("Send request button clicked");
             return new OrderTripPage(driver);
         }
 
         public MainPage ChangeSiteLanguage()
         {
             SetEnglishLanguage.Click();
+            Logger.Log.Info("English language button clicked");
             return this;
         }
 
@@ -81,7 +90,9 @@ namespace LdzTravelAutomation.Pages
         {
             new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementIsVisible(By.Name("departure")));
             CloseCookieButton.Click();
+            Logger.Log.Info("Cookie closed");
             ContactsButton.Click();
+            Logger.Log.Info("Contacts button clicked");
             return new QuestionPage(driver);
         }
     }

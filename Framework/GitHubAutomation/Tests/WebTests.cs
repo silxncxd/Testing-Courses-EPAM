@@ -13,10 +13,14 @@ namespace LdzTravelAutomation.Tests
         private const string TranslatedButton = "FIND TICKETS";
         private const string ReviewOrder = "5. Review order";
         private const string MessageToolTip = "We are currently processing your question.Thank you for your patience!";
+        private const string URL = "https://travel.ldz.lv/";
 
         [Test]
         public void SearchTrips()
         {
+            Logger.InitLogger();
+            Driver.Navigate().GoToUrl(URL);
+            Logger.Log.Info("Go to " + URL);
             TripInfo trip = TripInfoCreator.SetAllProperties();
             OrderTripPage orderTripPage = new MainPage(Driver)
                 .InputTripInfo(trip)
@@ -24,37 +28,46 @@ namespace LdzTravelAutomation.Tests
                 .ClickSendRequestButton();
             Assert.AreEqual(trip.DepartureStation, orderTripPage.DepartureStationInfo());
             Assert.AreEqual(trip.ArrivalStation, orderTripPage.ArrivalStationInfo());
+            Logger.Log.Info("Test complete successfully");
         }
-
 
         [Test]
         public void SameStationError()
         {
-            TripInfo trip = TripInfoCreator.SetSameStationInfo();
+            Logger.InitLogger();
+            Driver.Navigate().GoToUrl(URL);
+            Logger.Log.Info("Go to " + URL);
             OrderTripPage mainPage = new MainPage(Driver)
-                .InputTripInfo(trip)
+                .InputTripInfo(TripInfoCreator.SetSameStationInfo())
                 .CancelReturnTrip()
                 .ClickSendRequestButton();
             Assert.AreEqual(ErrorMessage, mainPage.GetErrorText());
+            Logger.Log.Info("Test complete successfully");
         }
 
         [Test]
         public void PastDateTest()
         {
-            TripInfo trip = TripInfoCreator.SetPastDateInfo();
+            Logger.InitLogger();
+            Driver.Navigate().GoToUrl(URL);
+            Logger.Log.Info("Go to " + URL);
             OrderTripPage mainPage = new MainPage(Driver)
-                .InputTripInfo(trip)
+                .InputTripInfo(TripInfoCreator.SetPastDateInfo())
                 .CancelReturnTrip()
                 .ClickSendRequestButton();
             Assert.AreEqual(BookingURL, Driver.Url);
+            Logger.Log.Info("Test complete successfully");
+
         }
 
         [Test]
         public void FalsePassengerInfo()
         {
-            TripInfo trip = TripInfoCreator.SetPastDateInfo();
+            Logger.InitLogger();
+            Driver.Navigate().GoToUrl(URL);
+            Logger.Log.Info("Go to " + URL);
             TravelerInfoPage travelerInfoPage = new MainPage(Driver)
-                .InputTripInfo(trip)
+                .InputTripInfo(TripInfoCreator.SetPastDateInfo())
                 .CancelReturnTrip()
                 .ClickSendRequestButton()
                 .ClickSelectCarriageButton()
@@ -63,22 +76,30 @@ namespace LdzTravelAutomation.Tests
                 .InputPassengerInfo(PassengerInfoCreator.SetInvalidInfo())
                 .ClickHotelsButton();
             Assert.IsTrue(travelerInfoPage.ErrorTooltip.Displayed);
+            Logger.Log.Info("Test complete successfully");
         }
 
         [Test]
         public void ChangeSiteLanguage()
         {
+            Logger.InitLogger();
+            Driver.Navigate().GoToUrl(URL);
+            Logger.Log.Info("Go to " + URL);
             MainPage mainPage = new MainPage(Driver)
                 .ChangeSiteLanguage();
             Assert.AreEqual(mainPage.sendRequestButton.Text, TranslatedButton);
+            Logger.Log.Info("Test complete successfully");
+
         }
 
         [Test]
         public void CheckSumOfTickets()
         {
-            TripInfo trip = TripInfoCreator.SetPastDateInfo();
+            Logger.InitLogger();
+            Driver.Navigate().GoToUrl(URL);
+            Logger.Log.Info("Go to " + URL);
             TravelerInfoPage travelerInfoPage = new MainPage(Driver)
-                .InputTripInfo(trip)
+                .InputTripInfo(TripInfoCreator.SetPastDateInfo())
                 .CancelReturnTrip()
                 .ClickSendRequestButton()
                 .ClickSelectCarriageButton()
@@ -87,22 +108,32 @@ namespace LdzTravelAutomation.Tests
                 .SelectWagonAndSeat()
                 .ClickConfirmButton();
             Assert.IsTrue(travelerInfoPage.ArePricesEqual());
+            Logger.Log.Info("Test complete successfully");
+
         }
 
         [Test]
         public void SearchTripsWithReturnOption()
         {
+            Logger.InitLogger();
+            Driver.Navigate().GoToUrl(URL);
+            Logger.Log.Info("Go to " + URL);
             TripInfo trip = TripInfoCreator.SetAllProperties();
             OrderTripPage orderTripPage = new MainPage(Driver)
                 .InputTripInfo(trip)
                 .InputReturnDate(trip)
                 .ClickSendRequestButton();
             Assert.AreEqual(orderTripPage.CountOfRoutes(), 2);
+            Logger.Log.Info("Test complete successfully");
+
         }
 
         [Test]
         public void ChooseReservedSeat()
         {
+            Logger.InitLogger();
+            Driver.Navigate().GoToUrl(URL);
+            Logger.Log.Info("Go to " + URL);
             TripInfo trip = TripInfoCreator.SetAllProperties();
             CarriagePage carriagePage = new MainPage(Driver)
                 .InputTripInfo(trip)
@@ -111,14 +142,17 @@ namespace LdzTravelAutomation.Tests
                 .ClickSelectCarriageButton()
                 .ChooseReservedSeat();
             Assert.IsFalse(carriagePage.TravelerInformationButton.Enabled);
+            Logger.Log.Info("Test complete successfully");
         }
 
         [Test]
         public void SuccessBookingTest()
         {
-            TripInfo trip = TripInfoCreator.SetPastDateInfo();
+            Logger.InitLogger();
+            Driver.Navigate().GoToUrl(URL);
+            Logger.Log.Info("Go to " + URL);
             BookingPage bookingPage = new MainPage(Driver)
-                .InputTripInfo(trip)
+                .InputTripInfo(TripInfoCreator.SetPastDateInfo())
                 .CancelReturnTrip()
                 .ClickSendRequestButton()
                 .ClickSelectCarriageButton()
@@ -127,16 +161,23 @@ namespace LdzTravelAutomation.Tests
                 .InputPassengerInfo(PassengerInfoCreator.SetNormalInfo())
                 .ClickBookingButton();
             Assert.AreEqual(bookingPage.GetReviewOrder(), ReviewOrder);
+            Logger.Log.Info("Test complete successfully");
+
         }
 
         [Test]
         public void SubmitAQuestion()
         {
+            Logger.InitLogger();
+            Driver.Navigate().GoToUrl(URL);
+            Logger.Log.Info("Go to " + URL);
             QuestionPage questionPage = new MainPage(Driver)
                 .ClickContactsButton()
                 .InputQuestion(QuestionInfoCreator.SetNormalInfo())
                 .ClickSendQuestionButton();
             Assert.AreEqual(questionPage.MessageTooltip, MessageToolTip);
+            Logger.Log.Info("Test complete successfully");
+
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using LdzTravelAutomation.Models;
 using OpenQA.Selenium;
+using LdzTravelAutomation.Services;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -38,6 +39,7 @@ namespace LdzTravelAutomation.Pages
         {
             driver = webDriver;
             PageFactory.InitElements(webDriver, this);
+            Logger.Log.Info("Carriage page initialized");
         }
 
         public CarriagePage SelectWagonAndSeat()
@@ -56,6 +58,7 @@ namespace LdzTravelAutomation.Pages
                     }
                 }
             }
+            Logger.Log.Info("Wagon and seat selected");
             return this;
         }
         
@@ -63,6 +66,7 @@ namespace LdzTravelAutomation.Pages
         {
             new WebDriverWait(driver, TimeSpan.FromSeconds(2)).Until(ExpectedConditions.ElementExists(By.ClassName("button.with-arrow.next-step-button")));
             TravelerInformationButton.Click();
+            Logger.Log.Info("Traveler information button clicked");
             return new TravelerInfoPage(driver, TotalPrice);
         }
         public CarriagePage ChooseReservedSeat()
@@ -72,16 +76,20 @@ namespace LdzTravelAutomation.Pages
                 wagon.Click();
                 ReservedSeat.Click();
             }
+            Logger.Log.Info("Reserved seat clicked");
             return this;
         }
         public CarriagePage ClickAddPassengerButton()
         {
             AddPassengerButton.Click();
+            Logger.Log.Info("Add passenger button clicked");
+
             return this;
         }
         public CarriagePage ChangePassenger()
         {
             NextPassengerButton.Click();
+            Logger.Log.Info("Next passenger button clicked");
             return this;
         }
 

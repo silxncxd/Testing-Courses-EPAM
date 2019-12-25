@@ -16,6 +16,7 @@ namespace LdzTravelAutomation.Services
                     ExeConfigFilename = AppDomain.CurrentDomain.BaseDirectory.Substring(0, index) +
                     @"Resources\" + file + ".config"
                 };
+                Logger.Log.Info("Normal test data got");
                 return ConfigurationManager.OpenMappedExeConfiguration(configeMap, ConfigurationUserLevel.None);
             }
         }

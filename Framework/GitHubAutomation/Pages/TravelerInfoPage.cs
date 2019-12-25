@@ -1,4 +1,5 @@
 ﻿using LdzTravelAutomation.Models;
+using LdzTravelAutomation.Services;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
@@ -41,6 +42,7 @@ namespace LdzTravelAutomation.Pages
             driver = webDriver;
             PreviousTotalPrice = totalPrice;
             PageFactory.InitElements(webDriver, this);
+            Logger.Log.Info("Traveler info page initialized");
         }
 
         public TravelerInfoPage InputPassengerInfo(PassengerInfo passenger)
@@ -49,24 +51,29 @@ namespace LdzTravelAutomation.Pages
             PassengerFirstName.SendKeys(passenger.FirstName);
             PassengerLastName.SendKeys(passenger.LastName);
             PassengerPassport.SendKeys(passenger.Passport);
+            Logger.Log.Info($"Passenger info input: {passenger.FirstName} / {passenger.LastName} / {passenger.Passport}");
             return this;
         }
 
         public TravelerInfoPage ClickHotelsButton()
         {
             HotelsButton.Click();
+            Logger.Log.Info("Hotels button clicked");
             return this;
         }
 
         public BookingPage ClickBookingButton()
         {
             ContinueBookingButton.Click();
+            Logger.Log.Info("Continue booking button clicked");
             return new BookingPage(driver);
         }
 
         public bool ArePricesEqual()
         {
-            return Convert.ToDouble(CurrentTotalPrice.Text) == PreviousTotalPrice;
+            bool result = Convert.ToDouble(CurrentTotalPrice.Text) == PreviousTotalPrice;
+            Logger.Log.Info("Boolean result of compare returned");
+            return result;
         }
     }
 }

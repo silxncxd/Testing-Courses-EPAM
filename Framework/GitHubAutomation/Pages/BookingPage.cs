@@ -1,5 +1,6 @@
 ﻿using LdzTravelAutomation.Models;
 using OpenQA.Selenium;
+using LdzTravelAutomation.Services;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -17,11 +18,14 @@ namespace LdzTravelAutomation.Pages
         {
             driver = webDriver;
             PageFactory.InitElements(webDriver, this);
+            Logger.Log.Info("Booking page initialized");
         }
 
         public string GetReviewOrder()
         {
+            Logger.Log.Info("Review got");
             return ReviewOrder.Text;
+
         }
     }
 

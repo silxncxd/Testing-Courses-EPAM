@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using LdzTravelAutomation.Services;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
@@ -30,12 +31,14 @@ namespace LdzTravelAutomation.Driver
                 }
                 driver.Manage().Window.Maximize();
             }
+            Logger.Log.Info("Driver opened");
             return driver;
         }
 
         public static void CloseDriver()
         {
             driver.Quit();
+            Logger.Log.Info("Driver closed");
             driver = null;
         }
     }
