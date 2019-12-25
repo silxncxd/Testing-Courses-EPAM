@@ -51,7 +51,7 @@ namespace LdzTravelAutomation.Pages
             PassengerFirstName.SendKeys(passenger.FirstName);
             PassengerLastName.SendKeys(passenger.LastName);
             PassengerPassport.SendKeys(passenger.Passport);
-            Logger.Log.Info($"Passenger info input:" + passenger.FirstName + "/" + passenger.LastName + "/" + passenger.Passport);
+            Logger.Log.Info("Passenger info input:" + passenger.FirstName + "/" + passenger.LastName + "/" + passenger.Passport);
             return this;
         }
 
