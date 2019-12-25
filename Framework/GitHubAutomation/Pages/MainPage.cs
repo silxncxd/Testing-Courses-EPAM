@@ -53,7 +53,7 @@ namespace LdzTravelAutomation.Pages
             departureStation.SendKeys(trip.DepartureStation);
             arrivalStation.SendKeys(trip.ArrivalStation);
             departureDate.SendKeys(trip.DepartureDate + "\n");
-            Logger.Log.Info($"Input trip info: {trip.DepartureStation} / {trip.ArrivalStation} / {trip.DepartureDate}");
+            Logger.Log.Info("Input trip info:" + trip.DepartureStation + "/" + trip.ArrivalStation + "/" + trip.DepartureDate);
             return this;
         }
 
