@@ -67,7 +67,7 @@ namespace LdzTravelAutomation.Pages
         public MainPage InputReturnDate(TripInfo trip)
         {
             returnDate.SendKeys(trip.ReturnDate + "\n");
-            Logger.Log.Info($"Return date input {trip.ReturnDate}");
+            Logger.Log.Info("Return date input" + trip.ReturnDate);
             return this;
         }
 
