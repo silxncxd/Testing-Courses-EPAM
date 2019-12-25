@@ -67,7 +67,7 @@ namespace LdzTravelAutomation.Tests
             Driver.Navigate().GoToUrl(URL);
             Logger.Log.Info("Go to " + URL);
             TravelerInfoPage travelerInfoPage = new MainPage(Driver)
-                .InputTripInfo(TripInfoCreator.SetPastDateInfo())
+                .InputTripInfo(TripInfoCreator.SetAllProperties())
                 .CancelReturnTrip()
                 .ClickSendRequestButton()
                 .ClickSelectCarriageButton()
@@ -99,7 +99,7 @@ namespace LdzTravelAutomation.Tests
             Driver.Navigate().GoToUrl(URL);
             Logger.Log.Info("Go to " + URL);
             TravelerInfoPage travelerInfoPage = new MainPage(Driver)
-                .InputTripInfo(TripInfoCreator.SetPastDateInfo())
+                .InputTripInfo(TripInfoCreator.SetAllProperties())
                 .CancelReturnTrip()
                 .ClickSendRequestButton()
                 .ClickSelectCarriageButton()
@@ -152,7 +152,7 @@ namespace LdzTravelAutomation.Tests
             Driver.Navigate().GoToUrl(URL);
             Logger.Log.Info("Go to " + URL);
             BookingPage bookingPage = new MainPage(Driver)
-                .InputTripInfo(TripInfoCreator.SetPastDateInfo())
+                .InputTripInfo(TripInfoCreator.SetAllProperties())
                 .CancelReturnTrip()
                 .ClickSendRequestButton()
                 .ClickSelectCarriageButton()
@@ -162,7 +162,6 @@ namespace LdzTravelAutomation.Tests
                 .ClickBookingButton();
             Assert.AreEqual(bookingPage.GetReviewOrder(), ReviewOrder);
             Logger.Log.Info("Test complete successfully");
-
         }
 
         [Test]
