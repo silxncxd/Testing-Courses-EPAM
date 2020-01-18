@@ -3,10 +3,10 @@ namespace LdzTravelAutomation.Models
 {
     public class TripInfo
     {
-        public string DepartureStation { get; }
-        public string ArrivalStation { get; }
-        public string DepartureDate { get; }
-        public string ReturnDate { get; }
+        public string DepartureStation { get; set; }
+        public string ArrivalStation { get; set; }
+        public string DepartureDate { get; set; }
+        public string ReturnDate { get; set; }
 
         public TripInfo (string departureStation, string arrivalStation, string departureDate, string returnDate)
         {

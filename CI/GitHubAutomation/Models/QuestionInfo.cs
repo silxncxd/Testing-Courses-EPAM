@@ -3,10 +3,10 @@ namespace LdzTravelAutomation.Models
 {
     public class QuestionInfo
     {
-        public string Name { get; }
-        public string Theme { get; }
-        public string Email { get; }
-        public string YourQuestion { get; }
+        public string Name { get; set; }
+        public string Theme { get; set; }
+        public string Email { get; set; }
+        public string YourQuestion { get; set; }
 
         public QuestionInfo(string name, string theme, string email, string yourQuestion)
         {

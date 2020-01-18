@@ -3,9 +3,9 @@ namespace LdzTravelAutomation.Models
 {
     public class PassengerInfo
     {
-        public string FirstName { get; }
-        public string LastName { get; }
-        public string Passport { get; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Passport { get; set; }
 
         public PassengerInfo(string firstName, string lastName, string passport)
         {
