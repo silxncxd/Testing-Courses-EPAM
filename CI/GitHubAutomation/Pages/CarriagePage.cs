@@ -69,15 +69,15 @@ namespace LdzTravelAutomation.Pages
             Logger.Log.Info("Traveler information button clicked");
             return new TravelerInfoPage(driver, TotalPrice);
         }
-        public CarriagePage ChooseReservedSeat()
+        public bool ChooseReservedSeat()
         {
             foreach (var wagon in Wagons)
             {
                 wagon.Click();
-                ReservedSeat.Click();
+                Logger.Log.Info("Reserved seat clicked");
+                return false;
             }
-            Logger.Log.Info("Reserved seat clicked");
-            return this;
+            return true;
         }
         public CarriagePage ClickAddPassengerButton()
         {
@@ -86,13 +86,16 @@ namespace LdzTravelAutomation.Pages
 
             return this;
         }
+        public bool State()
+        {
+            return !Price.Displayed;
+        }
         public CarriagePage ChangePassenger()
         {
             NextPassengerButton.Click();
             Logger.Log.Info("Next passenger button clicked");
             return this;
         }
-
         
     }
 
