@@ -14,6 +14,7 @@ namespace LdzTravelAutomation.Tests
         [SetUp]
         public void StartDriver()
         {
+            Logger.InitLogger();
             Driver = DriverSingleton.GetDriver();
             Logger.Log.Info("Browser initialized");
         }
