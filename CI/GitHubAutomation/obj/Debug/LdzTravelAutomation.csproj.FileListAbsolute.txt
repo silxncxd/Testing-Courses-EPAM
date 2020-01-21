@@ -1,0 +1,70 @@
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\bin\Debug\NUnit3.TestAdapter.dll
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\bin\Debug\nunit.engine.dll
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\bin\Debug\nunit.engine.api.dll
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\bin\Debug\GitHubAutomation.dll
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\bin\Debug\GitHubAutomation.pdb
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\bin\Debug\HtmlAgilityPack.dll
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\bin\Debug\nunit.framework.dll
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\bin\Debug\WebDriver.dll
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\bin\Debug\WebDriver.Support.dll
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\bin\Debug\WebDriverManager.dll
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\bin\Debug\HtmlAgilityPack.pdb
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\bin\Debug\HtmlAgilityPack.xml
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\bin\Debug\nunit.framework.pdb
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\bin\Debug\nunit.framework.xml
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\bin\Debug\WebDriver.xml
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\bin\Debug\WebDriver.Support.xml
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\obj\Debug\LdzTravelAutomation.csprojAssemblyReference.cache
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\obj\Debug\LdzTravelAutomation.csproj.CoreCompileInputs.cache
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\obj\Debug\LdzTravelAutomation.csproj.CopyComplete
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\obj\Debug\GitHubAutomation.dll
+C:\Новая папка (2)\TestingCourse-master\Framework1\GitHubAutomation\obj\Debug\GitHubAutomation.pdb
+C:\Data\temp\git-demo\Framework\GitHubAutomation\bin\Debug\NUnit3.TestAdapter.dll
+C:\Data\temp\git-demo\Framework\GitHubAutomation\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Data\temp\git-demo\Framework\GitHubAutomation\bin\Debug\nunit.engine.dll
+C:\Data\temp\git-demo\Framework\GitHubAutomation\bin\Debug\nunit.engine.api.dll
+C:\Data\temp\git-demo\Framework\GitHubAutomation\bin\Debug\GitHubAutomation.dll
+C:\Data\temp\git-demo\Framework\GitHubAutomation\bin\Debug\GitHubAutomation.pdb
+C:\Data\temp\git-demo\Framework\GitHubAutomation\bin\Debug\HtmlAgilityPack.dll
+C:\Data\temp\git-demo\Framework\GitHubAutomation\bin\Debug\nunit.framework.dll
+C:\Data\temp\git-demo\Framework\GitHubAutomation\bin\Debug\WebDriver.dll
+C:\Data\temp\git-demo\Framework\GitHubAutomation\bin\Debug\WebDriver.Support.dll
+C:\Data\temp\git-demo\Framework\GitHubAutomation\bin\Debug\WebDriverManager.dll
+C:\Data\temp\git-demo\Framework\GitHubAutomation\bin\Debug\HtmlAgilityPack.pdb
+C:\Data\temp\git-demo\Framework\GitHubAutomation\bin\Debug\HtmlAgilityPack.xml
+C:\Data\temp\git-demo\Framework\GitHubAutomation\bin\Debug\nunit.framework.pdb
+C:\Data\temp\git-demo\Framework\GitHubAutomation\bin\Debug\nunit.framework.xml
+C:\Data\temp\git-demo\Framework\GitHubAutomation\bin\Debug\WebDriver.xml
+C:\Data\temp\git-demo\Framework\GitHubAutomation\bin\Debug\WebDriver.Support.xml
+C:\Data\temp\git-demo\Framework\GitHubAutomation\obj\Debug\LdzTravelAutomation.csprojAssemblyReference.cache
+C:\Data\temp\git-demo\Framework\GitHubAutomation\obj\Debug\LdzTravelAutomation.csproj.CoreCompileInputs.cache
+C:\Data\temp\git-demo\Framework\GitHubAutomation\obj\Debug\LdzTravelAutomation.csproj.CopyComplete
+C:\Data\temp\git-demo\Framework\GitHubAutomation\obj\Debug\GitHubAutomation.dll
+C:\Data\temp\git-demo\Framework\GitHubAutomation\obj\Debug\GitHubAutomation.pdb
+C:\Data\temp\git-demo\Framework\GitHubAutomation\bin\Debug\log4net.dll
+C:\Data\temp\git-demo\Framework\GitHubAutomation\bin\Debug\log4net.xml
+C:\Data\temp\git-demo\CI\GitHubAutomation\bin\Debug\NUnit3.TestAdapter.dll
+C:\Data\temp\git-demo\CI\GitHubAutomation\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Data\temp\git-demo\CI\GitHubAutomation\bin\Debug\nunit.engine.dll
+C:\Data\temp\git-demo\CI\GitHubAutomation\bin\Debug\nunit.engine.api.dll
+C:\Data\temp\git-demo\CI\GitHubAutomation\bin\Debug\GitHubAutomation.dll
+C:\Data\temp\git-demo\CI\GitHubAutomation\bin\Debug\GitHubAutomation.pdb
+C:\Data\temp\git-demo\CI\GitHubAutomation\bin\Debug\HtmlAgilityPack.dll
+C:\Data\temp\git-demo\CI\GitHubAutomation\bin\Debug\log4net.dll
+C:\Data\temp\git-demo\CI\GitHubAutomation\bin\Debug\nunit.framework.dll
+C:\Data\temp\git-demo\CI\GitHubAutomation\bin\Debug\WebDriver.dll
+C:\Data\temp\git-demo\CI\GitHubAutomation\bin\Debug\WebDriver.Support.dll
+C:\Data\temp\git-demo\CI\GitHubAutomation\bin\Debug\WebDriverManager.dll
+C:\Data\temp\git-demo\CI\GitHubAutomation\bin\Debug\HtmlAgilityPack.pdb
+C:\Data\temp\git-demo\CI\GitHubAutomation\bin\Debug\HtmlAgilityPack.xml
+C:\Data\temp\git-demo\CI\GitHubAutomation\bin\Debug\log4net.xml
+C:\Data\temp\git-demo\CI\GitHubAutomation\bin\Debug\nunit.framework.pdb
+C:\Data\temp\git-demo\CI\GitHubAutomation\bin\Debug\nunit.framework.xml
+C:\Data\temp\git-demo\CI\GitHubAutomation\bin\Debug\WebDriver.xml
+C:\Data\temp\git-demo\CI\GitHubAutomation\bin\Debug\WebDriver.Support.xml
+C:\Data\temp\git-demo\CI\GitHubAutomation\obj\Debug\LdzTravelAutomation.csprojAssemblyReference.cache
+C:\Data\temp\git-demo\CI\GitHubAutomation\obj\Debug\LdzTravelAutomation.csproj.CoreCompileInputs.cache
+C:\Data\temp\git-demo\CI\GitHubAutomation\obj\Debug\LdzTravelAutomation.csproj.CopyComplete
+C:\Data\temp\git-demo\CI\GitHubAutomation\obj\Debug\GitHubAutomation.dll
+C:\Data\temp\git-demo\CI\GitHubAutomation\obj\Debug\GitHubAutomation.pdb
